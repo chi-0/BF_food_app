@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "바보맛저",
+  "short_name": "바보맛저",
+  "description": "바보맛저에서 맛집을 기록해 보세요",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/icons/baboLogo_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
