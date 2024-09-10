@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const notoSansKR = Noto_Sans_KR({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const viewport = {
   themeColor: "#ffffff",
@@ -23,8 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} w-[100dvw] h-[100dvh]`}>
+    <html lang="en" className="sm:text-base text-base-m">
+      <body
+        className={`${inter.className} ${notoSansKR.className} w-[100dvw] h-[100dvh]`}
+      >
         {children}
       </body>
     </html>

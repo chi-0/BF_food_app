@@ -14,6 +14,17 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    fontSize: {
+      s: "12px",
+      sm: "14px",
+      base: "16px",
+      "base-m": "14px",
+      xl: "1.2rem",
+      "2xl": "30px",
+    },
+    backgroundColor: {
+      hover: "rgba(255,255,255,0.8)",
+    },
   },
   plugins: [],
 };
