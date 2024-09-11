@@ -24,7 +24,7 @@ export const Category = () => {
           key={tab}
         >
           <Link
-            className="flex flex-col h-full justify-end items-center"
+            className="flex flex-col h-full justify-end items-center font-medium"
             href="/"
             role="tab"
             aria-selected={selectedTab === tab}
@@ -33,7 +33,7 @@ export const Category = () => {
             <div className="relative pb-1">
               <span>{tab}</span>
               {selectedTab === tab && (
-                <div className="w-full h-[2px] bg-[#000] rounded-[10px] absolute bottom-0 left-0" />
+                <div className="w-full h-[3px] bg-point rounded-[10px] absolute bottom-0 left-0" />
               )}
             </div>
           </Link>

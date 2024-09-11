@@ -73,7 +73,7 @@ export const Navbar = () => {
         </Link>
         <Link
           href={"/post"}
-          className="text-center rounded-[100px] shadow-md p-2 bg-[rgba(0,0,0,0.2)] text-base mt-[1rem] hover:bg-hover"
+          className="text-center rounded-[100px] shadow-md p-2 bg-point text-base mt-[1rem] hover:bg-hover"
         >
           게시물 등록
         </Link>

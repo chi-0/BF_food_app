@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        point: "rgba(255, 99, 71,1)",
+      },
     },
     fontSize: {
       s: "12px",
@@ -24,6 +27,8 @@ const config: Config = {
     },
     backgroundColor: {
       hover: "rgba(255,255,255,0.8)",
+      point: "rgba(255, 99, 71,1)",
+      "point-s": "rgba(255, 99, 71,0.7)",
     },
   },
   plugins: [],
