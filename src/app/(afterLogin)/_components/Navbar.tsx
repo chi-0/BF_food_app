@@ -7,6 +7,7 @@ import { AiOutlineHome, AiFillHome } from "react-icons/ai";
 import { MdPersonSearch, MdOutlinePersonSearch } from "react-icons/md";
 import { RiSearchLine, RiSearchFill } from "react-icons/ri";
 import { FaUser, FaRegUser } from "react-icons/fa6";
+import { IoCloudUploadOutline } from "react-icons/io5";
 
 export const Navbar = () => {
   const path = usePathname();
@@ -21,7 +22,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="desktop:w-[12%] w-[5%] min-w-[53px] h-full flex flex-col justify-between">
       <nav className="flex flex-col text-xl gap-y-3">
         <img
           src="/assets/icons/baboLogo_192.png"
@@ -31,26 +32,27 @@ export const Navbar = () => {
         <Link
           href={"/"}
           className={clsx(
-            "hover:bg-hover p-2 rounded-md flex items-center gap-x-2",
+            "hover:bg-hover p-2 rounded-md flex items-center gap-x-2 justify-center desktop:justify-start",
             path === "/" && "font-semibold bg-hover shadow-md"
           )}
         >
-          {path === "/" ? <AiFillHome /> : <AiOutlineHome />}홈
+          {path === "/" ? <AiFillHome /> : <AiOutlineHome />}
+          <p className="desktop:inline-block hidden">홈</p>
         </Link>
         <Link
           href={"/explore"}
           className={clsx(
-            "hover:bg-hover p-2 rounded-md flex items-center gap-x-2",
+            "hover:bg-hover p-2 rounded-md flex items-center gap-x-2 justify-center desktop:justify-start",
             path === "/explore" && "font-semibold bg-hover shadow-md"
           )}
         >
           {path === "/explore" ? <RiSearchFill /> : <RiSearchLine />}
-          검색
+          <p className="desktop:inline-block hidden">검색</p>
         </Link>
         <Link
           href={"/followers"}
           className={clsx(
-            "hover:bg-hover p-2 rounded-md flex items-center gap-x-2",
+            "hover:bg-hover p-2 rounded-md flex items-center gap-x-2 justify-center desktop:justify-start",
             path === "/followers" && "font-semibold bg-hover shadow-md"
           )}
         >
@@ -59,36 +61,37 @@ export const Navbar = () => {
           ) : (
             <MdOutlinePersonSearch />
           )}
-          팔로워
+          <p className="desktop:inline-block hidden">팔로워</p>
         </Link>
         <Link
           href={"/profile"}
           className={clsx(
-            "hover:bg-hover p-2 rounded-md flex items-center gap-x-2",
+            "hover:bg-hover p-2 rounded-md flex items-center gap-x-2 justify-center desktop:justify-start",
             path === "/profile" && "font-semibold bg-hover shadow-md"
           )}
         >
           {path === "/profile" ? <FaUser /> : <FaRegUser />}
-          프로필
+          <p className="desktop:inline-block hidden">프로필</p>
         </Link>
         <Link
           href={"/post"}
-          className="text-center rounded-[100px] shadow-md p-2 bg-point text-base mt-[1rem] hover:bg-hover"
+          className="text-center rounded-[100px] shadow-md p-2 bg-point text-base mt-[1rem] hover:bg-hover desktop:block flex items-center justify-center"
         >
-          게시물 등록
+          <p className="desktop:block hidden">게시물 등록</p>
+          <IoCloudUploadOutline className="desktop:hidden text-xl" />
         </Link>
       </nav>
       <div
         onClick={logoutHandler}
-        className="flex items-center cursor-pointer hover:bg-hover p-2 rounded-[100px]"
+        className="flex items-center cursor-pointer hover:bg-hover p-2 rounded-[100px] justify-center desktop:jusfify-start"
       >
         <img
           src="/assets/dummy/user1.jpg"
-          className="rounded-[50%] w-[40px] h-[40px] mr-3"
+          className="rounded-[50%] w-[40px] h-[40px] desktop:mr-3"
         />
-        <div className="flex flex-col">
-          <span className="text-sm">Christiano Ronaldo</span>
-          <span className="text-s font-light">@CR7</span>
+        <div className="hidden flex-col gap-y-2 desktop:flex">
+          <span className="text-sm leading-none">Christiano Ronaldo</span>
+          <span className="text-s font-light leading-none">@CR7</span>
         </div>
       </div>
     </div>

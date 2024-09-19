@@ -1,9 +1,11 @@
 import { HomeForm } from "./_components/HomeForm";
+import { Post } from "./_components/Post";
 
 const Home = () => {
   return (
-    <div className="px-32 py-5">
+    <div className="w-full px-32 py-5 flex flex-col gap-y-5">
       <HomeForm />
+      <Post />
     </div>
   );
 };

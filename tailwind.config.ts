@@ -30,6 +30,11 @@ const config: Config = {
       point: "rgba(255, 99, 71,1)",
       "point-s": "rgba(255, 99, 71,0.7)",
     },
+    screens: {
+      mobile: "640px",
+      tablet: "1024px",
+      desktop: "1280px",
+    },
   },
   plugins: [],
 };

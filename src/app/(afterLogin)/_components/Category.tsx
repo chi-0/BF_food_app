@@ -14,7 +14,7 @@ export const Category = () => {
   };
 
   return (
-    <div className="w-full h-[8%] bg-[rgba(255,255,255,0.7)] rounded-tl-md grid grid-cols-5">
+    <div className="w-full h-[8%] bg-[rgba(255,255,255,0.7)] rounded-t-md desktop:rounded-tr-none grid grid-cols-5 mb-[1px]">
       {tabs.map((tab, index) => (
         <div
           className={clsx(
