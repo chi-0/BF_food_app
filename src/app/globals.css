@@ -9,19 +9,23 @@
   scrollbar-width: none;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  width: 35px !important;
-  height: 100% !important;
+.swiper {
   margin: 0 !important;
-  top: 0 !important;
-  opacity: 0 !important;
 }
 
-.swiper-button-next {
-  right: 0 !important;
+.swiper:hover {
+  .swiper-pagination {
+    opacity: 1;
+  }
 }
 
-.swiper-button-prev {
-  left: 0 !important;
+.swiper-pagination {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3px !important;
+  border-radius: 50px;
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
 }

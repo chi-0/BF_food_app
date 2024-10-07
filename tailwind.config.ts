@@ -18,12 +18,12 @@ const config: Config = {
       },
     },
     fontSize: {
-      s: "12px",
+      s: "0.9rem",
       sm: "14px",
       base: "16px",
       "base-m": "14px",
       xl: "1.2rem",
-      "2xl": "30px",
+      "2xl": "1.6rem",
     },
     backgroundColor: {
       hover: "rgba(255,255,255,0.8)",

@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="sm:text-base text-base-m">
+    <html lang="en" className="desktop:text-base text-base-m">
       <body
         className={`${inter.className} ${notoSansKR.className} w-[100dvw] h-[100dvh]`}
       >
